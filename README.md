@@ -1,5 +1,7 @@
 # Retrying
 
+[![Gem Version](https://badge.fury.io/rb/retrying.png)](http://badge.fury.io/rb/retrying)
+
 Runs a code block, and retries it when an exception occurs.
 
 It's configured using optional parameters `:tries` and `:on`.
