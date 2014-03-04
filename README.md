@@ -4,7 +4,7 @@
 
 Runs a code block, and retries it when an exception occurs.
 
-It's configured using optional parameters `:tries` and `:on`.
+It's configured using optional parameters `:tries`, `:on` and `:sleep`.
 
 Should the number of retries be reached without success, the last exception
 will be raised.
@@ -39,7 +39,7 @@ require "open-uri"
 
 include Retrying
 
-retrying(:tries => 3, :on => OpenURI::HTTPError) do
+retrying(:tries => 3, :on => OpenURI::HTTPError, :sleep => 0.5) do
   xml = open("http://example.com/test.xml").read
 end
 ```
